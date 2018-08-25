@@ -1,0 +1,12 @@
+vbell off
+defscrollback 8192
+
+#caption always "%?%F%{wb}%? %L=%-Lw%45>%{+b bw}%n%f* %t%{-}%+Lw%-0<"
+# %?%F%{wb}%?   : set the current window title's color to white/blue, white is bg, blue is fg
+
+#caption always "%{wb} %-w%{+b bw}%n %t%{-}%+w"
+caption always "%{= kw}%-w%{= kG}%{+b}[%n %t]%{-b}%{= kw}%+w %=%d %M %0c %{g}%H%{-}" 
+
+term xterm-256color
+
+?View Code BASH

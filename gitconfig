@@ -1,0 +1,24 @@
+[user]
+	name = tiechou
+	email = tiechou@taobao.com
+[merge]
+        tool = vimdiff
+[core]
+        editor = vim
+        autocrlf = false
+[color]
+        status = auto
+        diff = auto
+[alias]
+    ci = commit
+    st = status
+    co = checkout
+    br = branch
+    re = remote 
+[http]
+	sslVerify = false
+	postBuffer = 32000M
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
