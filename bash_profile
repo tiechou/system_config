@@ -10,9 +10,10 @@ fi
 export LD_LIBRARY_PATH=/usr/lib:/usr/local/lib:$LD_LIBRARY_PATH
 
 MAVEN_HOME=/usr/local/Cellar/maven/3.3.3
+JAVA_HOME=$(/usr/libexec/java_home)
 PATH=/opt/local/bin:/opt/local/sbin:$PATH
 PATH=/usr/local/bin:/bin:/sbin:/usr/bin:$PATH
-PATH=$MAVEN_HOME/bin:$PATH
+PATH=$JAVA_HOME/bin:$MAVEN_HOME/bin:$PATH
 
 export PATH
 unset USERNAME
@@ -34,18 +35,17 @@ alias ll="ls -l"
 alias mv="mv -i"
 alias md5sum="md5"
 alias grep="grep --color"
-alias golf='/Users/tiechou/.autologin.sh.golf'
-alias amazon='ssh -o ServerAliveInterval=20 -i ~/.ssh/amazon_ec.pem ec2-user@35.162.171.139'
 alias tailf="tail -f"
+
+alias alibaba='ssh -o ServerAliveInterval=20 tiechou@login1.cm10.alibaba.org'
+alias amazon='ssh -o ServerAliveInterval=20 -i ~/.ssh/amazon_ec.pem ec2-user@35.162.171.139'
 alias rpm2cpio="/usr/local/Cellar/rpm2cpio/1.3/bin/rpm2cpio.pl"
-alias rvi="rvictl -s f7bd85d812f86894845ad5f7b18ec6e877e7d09d"
 
 alias gitl="git log --stat --graph"
 alias gitb="git branch -a"
 alias gits="git status"
 alias gitr="git remote -v"
 
-alias mysql_yb='mysql -hrm-bp16h0i87ejqm1oq6public.mysql.rds.aliyuncs.com -utiechou -pbcHehf7LRLRr'
 alias rdb='mysql -hrr-bp1369rv3t3517262public.mysql.rds.aliyuncs.com -utiechou -pbcHehf7LRLRr'
 alias http_server="nohup python -m SimpleHTTPServer 8000 &"
 
@@ -53,3 +53,9 @@ alias dgraph='docker run -m 4g -p 8010:8010 -w ${HOME} -v${HOME}:${HOME} --rm -i
 alias dlinux='docker run -it --rm=true --memory=4g --publish=9981:9981 --volume=${HOME}:/home/admin --workdir=/home/admin/code tiechou/linux_env /bin/bash'
 alias dimage='docker image'
 
+alias rdb='mysql -hrr-bp1369rv3t3517262public.mysql.rds.aliyuncs.com -utiechou -pbcHehf7LRLRr'
+alias http_server="nohup python -m SimpleHTTPServer 8000 &"
+
+alias aktest='~/code/pha-all/arcanist/bin/ak diff origin/develop --test'
+alias akland='~/code/pha-all/arcanist/bin/ak land --onto develop'
+alias akconfig='~/code/pha-all/arcanist/bin/ak set-config phabricator.uri https://aone.alibaba-inc.com/'
