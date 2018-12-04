@@ -5,6 +5,8 @@ if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
 fi
 
+# User specific environment and startup programs
+
 # uname -a                      # 查看内核/操作系统/CPU信息的linux系统信息命令
 # env                           # 查看环境变量资源
 # w                             # 查看活动用户
@@ -43,7 +45,41 @@ fi
 # chkconfig –list               # 列出所有系统服务
 # chkconfig –list | grep on     # 列出所有启动的系统服务程序
 # rpm -qa                       # 查看所有安装的软件包
-# User specific environment and startup programs
+# kill -l                       # 查看 Linux SIG 定义
+
+# 符号名　　信号值 描述　　　　　　　　　　　　　　　　是否符合POSIX
+# SIGHUP　　1　　　在控制终端上检测到挂断或控制线程死亡　　是
+# SIGINT　　2　　　交互注意信号　　　　　　　　　　　　　　是
+# SIGQUIT　 3　　　交互中止信号　　　　　　　　　　　　　　是
+# SIGILL　　4　　　检测到非法硬件的指令　　　　　　　　　　是
+# SIGTRAP　 5　　　从陷阱中回朔　　　　　　　　　　　　　　否
+# SIGABRT　 6　　　异常终止信号　　　　　　　　　　　　　　是
+# SIGEMT　　7　　　EMT 指令　　　　　　　　　　　　　　　　否
+# SIGFPE　　8　　　不正确的算术操作信号　　　　　　　　　　是
+# SIGKILL　 9　　　终止信号　　　　　　　　　　　　　　　　是
+# SIGBUS　　10　　 总线错误　　　　　　　　　　　　　　　　否
+# SIGSEGV　 11　　 检测到非法的内存调用　　　　　　　　　　是
+# SIGSYS　　12　　 系统call的错误参数　　　　　　　　　　　否
+# SIGPIPE　 13　　 在无读者的管道上写　　　　　　　　　　　是
+# SIGALRM　 14　　 报时信号　　　　　　　　　　　　　　　　是
+# SIGTERM　 15　　 终止信号　　　　　　　　　　　　　　　　是
+# SIGURG　　16　　 IO信道紧急信号　　　　　　　　　　　　　否
+# SIGSTOP　 17　　 暂停信号　　　　　　　　　　　　　　　　是
+# SIGTSTP　 18　　 交互暂停信号　　　　　　　　　　　　　　是
+# SIGCONT　 19　　 如果暂停则继续　　　　　　　　　　　　　是
+# SIGCHLD　 20　　 子线程终止或暂停　　　　　　　　　　　　是
+# SIGTTIN　 21　　 后台线程组一成员试图从控制终端上读出　　是
+# SIGTTOU　 22　　 后台线程组的成员试图写到控制终端上　　　是
+# SIGIO　　 23　　 允许I/O信号 　　　　　　　　　　　　　　否
+# SIGXCPU　 24　　 超出CPU时限　　　　　　　　　　　　　　 否
+# SIGXFSZ　 25　　 超出文件大小限制　　　　　　　　　　　　否
+# SIGVTALRM 26　　 虚时间警报器　　　　　　　　　　　　　　否
+# SIGPROF　 27　　 侧面时间警报器　　　　　　　　　　　　　否
+# SIGWINCH　28　　 窗口大小的更改　　　　　　　　　　　　　否
+# SIGINFO　 29　　 消息请求　　　　　　　　　　　　　　　　否
+# SIGUSR1 　30　　 保留作为用户自定义的信号1　　　　　　　 是
+# SIGUSR2 　31　　 保留作为用户自定义的信号　　　　　　　　是
+
 
 export LD_LIBRARY_PATH=/usr/lib:/usr/local/lib:$LD_LIBRARY_PATH
 
