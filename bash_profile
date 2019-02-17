@@ -49,8 +49,9 @@ alias gitr="git remote -v"
 alias rdb='mysql -hrr-bp1369rv3t3517262public.mysql.rds.aliyuncs.com -utiechou -pbcHehf7LRLRr'
 alias http_server="nohup python -m SimpleHTTPServer 8000 &"
 
-alias dgraph='docker run -m 4g -p 8010:8010 -w ${HOME} -v${HOME}:${HOME} --rm -i -t reg.docker.alibaba-inc.com/graph_embeding/graphsage:dev /bin/bash'
-alias dlinux='docker run -it --rm=true --memory=4g --publish=9981:9981 --volume=${HOME}:/home/admin --workdir=/home/admin/code tiechou/linux_env /bin/bash'
+## docker exec -it --privileged=true $(docker ps | grep -v CONTAINER | awk '{ print $1}') /bin/bash
+alias dgraph='docker run -it --rm=true --memory=4g --publish=8010:8010 --volume=${HOME}:/home/admin --workdir=/home/admin/github/graph_embedding reg.docker.alibaba-inc.com/graph_embeding/graphsage:dev /bin/bash'
+alias dlinux='docker run -it --rm=true --memory=4g --publish=9981:9981 --volume=${HOME}:/home/admin --workdir=/home/admin/code registry.cn-hangzhou.aliyuncs.com/tiechou/linux_env:001 /bin/bash'
 alias dimage='docker image'
 
 alias rdb='mysql -hrr-bp1369rv3t3517262public.mysql.rds.aliyuncs.com -utiechou -pbcHehf7LRLRr'

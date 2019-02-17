@@ -1,0 +1,30 @@
+### Java template
+*.class
+*.classpath
+
+# Package Files #
+*.war
+*.ear
+*.zip
+
+# for eclipse
+.settings/
+.project
+.sconsign.dblite
+
+# idea
+.idea/
+target
+
+# protobuf
+*.pb.cc
+*.pb.h
+*_generated.h
+
+.DS_Store
+.idea/
+
+# object
+*.o
+*.a
+*.so
